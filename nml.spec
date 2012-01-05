@@ -46,5 +46,5 @@ PYTHONDONTWRITEBYTECODE= python setup.py install --prefix %{buildroot}%{_prefix}
 %doc docs/* examples/
 %{_bindir}/nmlc
 %{_mandir}/man1/nmlc.1.*
-%{python_sitelib}/%{name}-%{version}-py%{pyver}.egg/
+%{python_sitelib}/%{name}-%{version}-py*.egg/
 
