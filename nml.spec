@@ -1,7 +1,7 @@
 Name:		nml
 Summary:	A tool to compile nml files to grf or nfo files
 Version:	0.2.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphics
 URl:		http://dev.openttdcoop.org/projects/nml
@@ -10,6 +10,7 @@ BuildArch:	noarch
 BuildRequires:	python-setuptools
 Requires:	python-ply
 Requires:	python-imaging
+Requires:	python-pkg-resources
 
 %description
 A tool to compile nml files to grf and/or nfo files.
