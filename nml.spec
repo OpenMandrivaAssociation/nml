@@ -1,7 +1,7 @@
 Name:		nml
 Summary:	A tool to compile nml files to grf or nfo files
-Version:	0.2.1
-Release:	%mkrel 2
+Version:	0.2.3
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphics
 URl:		http://dev.openttdcoop.org/projects/nml
