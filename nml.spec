@@ -49,3 +49,18 @@ PYTHONDONTWRITEBYTECODE= python setup.py install --prefix %{buildroot}%{_prefix}
 %{_mandir}/man1/nmlc.1.*
 %{python_sitelib}/%{name}-%{version}-py*.egg/
 
+
+
+%changelog
+* Mon Apr 16 2012 Andrey Bondrov <abondrov@mandriva.org> 0.2.3-1
++ Revision: 791261
+- New version 0.2.3
+
+* Fri Jan 06 2012 Andrey Bondrov <abondrov@mandriva.org> 0.2.1-2
++ Revision: 757999
+- Add python-pkg-resources to Requires
+
+* Thu Jan 05 2012 Andrey Bondrov <abondrov@mandriva.org> 0.2.1-1
++ Revision: 757858
+- imported package nml
+
