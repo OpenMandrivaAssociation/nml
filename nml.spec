@@ -3,7 +3,7 @@
 Summary:	A tool to compile nml files to grf or nfo files
 Name:		nml
 Version:	0.3.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 Url:		http://dev.openttdcoop.org/projects/nml
