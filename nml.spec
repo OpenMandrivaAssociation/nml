@@ -12,7 +12,6 @@ BuildRequires:	python-ply
 Requires:	python-ply
 Requires:	python-imaging
 Requires:	python-pkg-resources
-BuildArch:	noarch
 
 %description
 A tool to compile nml files to grf and/or nfo files.
