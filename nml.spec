@@ -20,10 +20,13 @@ A tool to compile nml files to grf and/or nfo files.
 NML is a meta-language that aims to be a lot simpler to learn and use than nfo.
 
 %files
-%doc docs/* examples/
+%doc examples/
+%doc docs/changelog.txt docs/index.html docs/readme.txt docs/license.txt
 %{_bindir}/nmlc
 %{_mandir}/man1/nmlc.1.*
-%{python3_sitelib}/%{name}-%{version}*-py*.egg/
+%{python3_sitearch}/%{name}-*-py%{py3ver}.egg-info/
+%{python3_sitearch}/%{name}/
+%{python3_sitearch}/nml_lz77.cpython-*.so
 
 #----------------------------------------------------------------------------
 
@@ -36,8 +39,7 @@ PYTHONDONTWRITEBYTECODE= python3 setup.py build
 %install
 mkdir -p %{buildroot}%{python3_sitelib}
 
-export PYTHONPATH=%{buildroot}%{python3_sitelib}
-PYTHONDONTWRITEBYTECODE= python3 setup.py install --prefix %{buildroot}%{_prefix}
+PYTHONDONTWRITEBYTECODE= python3 setup.py install --root %{buildroot} --prefix %{_prefix}
 
 #handle docs in files section
 rm -rf %{buildroot}%{_defaultdocdir}
@@ -46,5 +48,4 @@ rm -rf %{buildroot}%{_defaultdocdir}
 install -Dpm655 docs/nmlc.1 %{buildroot}%{_mandir}/man1/nmlc.1
 
 #unpackaged files
-rm -rf docs/nmlc.1
 rm -rf %{buildroot}%{python3_sitelib}/{easy-install.pth,site.py,site.pyc}
