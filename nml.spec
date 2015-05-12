@@ -1,11 +1,13 @@
+%define rev r5242-f6a3ae1163ab
+
 Name:		nml
 Summary:	A tool to compile nml files to grf or nfo files
-Version:	0.2.4
+Version:	0.3.1
 Release:	1
 License:	GPLv2+
 Group:		Graphics
 URl:		http://dev.openttdcoop.org/projects/nml
-Source0:	http://bundles.openttdcoop.org/nml/releases/LATEST/%{name}-%{version}.src.tar.gz
+Source0:	http://bundles.openttdcoop.org/nml/releases/LATEST/%{name}-%{version}.%{rev}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 Requires:	python-ply
@@ -18,7 +20,7 @@ A tool to compile nml files to grf and/or nfo files.
 NML is a meta-language that aims to be a lot simpler to learn and use than nfo.
 
 %prep
-%setup -q
+%setup -qn %{name}-%{version}.%{rev}
 
 %build
 PYTHONDONTWRITEBYTECODE= python setup.py build
@@ -44,5 +46,5 @@ rm -rf %{buildroot}%{python_sitelib}/{easy-install.pth,site.py,site.pyc}
 %doc docs/* examples/
 %{_bindir}/nmlc
 %{_mandir}/man1/nmlc.1.*
-%{python_sitelib}/%{name}-%{version}-py*.egg/
+%{python_sitelib}/%{name}-%{version}*-py*.egg/
 
