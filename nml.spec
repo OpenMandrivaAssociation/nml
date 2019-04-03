@@ -1,6 +1,6 @@
 Summary:	A tool to compile nml files to grf or nfo files
 Name:		nml
-Version:	0.4.1
+Version:	0.4.5
 Release:	1
 License:	GPLv2+
 Group:		Graphics
