@@ -23,11 +23,13 @@ A tool to compile nml files to grf and/or nfo files.
 NML is a meta-language that aims to be a lot simpler to learn and use than nfo.
 
 %files
+%license LICENSE
+%doc README*
 %doc examples/
-%doc docs/changelog.txt docs/index.html docs/readme.txt docs/license.txt
+%doc docs/changelog.txt
 %{_bindir}/nmlc
-%{_mandir}/man1/nmlc.1.*
-%{python_sitearch}/%{name}-*-py%{py3ver}.egg-info/
+%{_mandir}/man1/nmlc.1*
+%{python_sitearch}/%{name}-*-py%{python_version}.egg-info/
 %{python_sitearch}/%{name}/
 %{python_sitearch}/nml_lz77.cpython-*.so
 
