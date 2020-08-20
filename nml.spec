@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		https://github.com/OpenTTD/nml
-Source0:	http://bundles.openttdcoop.org/nml/releases/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/OpenTTD/nml/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  python-devel
 BuildRequires:	python-distribute
 BuildRequires:	python-imaging
