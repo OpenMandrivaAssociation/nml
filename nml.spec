@@ -29,14 +29,14 @@ NML is a meta-language that aims to be a lot simpler to learn and use than nfo.
 %doc docs/changelog.txt
 %{_bindir}/nmlc
 %{_mandir}/man1/nmlc.1*
-#{python_sitearch}/%{name}-*-py%{python_version}.egg-info/
+%{python_sitearch}/%{name}-*.dist-info
 %{python_sitearch}/%{name}/
 %{python_sitearch}/nml_lz77.cpython-*.so
 
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %py3_build
