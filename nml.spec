@@ -12,6 +12,7 @@ BuildRequires:	python-imaging
 BuildRequires:	python-ply
 BuildRequires:	python-pillow
 BuildRequires:	python-setuptools
+BuildRequires:  python-pip
 Requires:	python-ply
 Requires:	python-imaging
 Requires:	python-pkg-resources
