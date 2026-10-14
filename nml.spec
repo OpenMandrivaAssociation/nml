@@ -1,22 +1,18 @@
 Summary:	A tool to compile nml files to grf or nfo files
 Name:		nml
 Version:	0.9.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 Url:		https://github.com/OpenTTD/nml
 Source0:	https://github.com/OpenTTD/nml/archive/%{version}/%{name}-%{version}.tar.gz
-BuildRequires:  python-devel
-BuildRequires:	python-distribute
-BuildRequires:	python-imaging
-BuildRequires:	python-ply
-BuildRequires:	python-pillow
-BuildRequires:	python-setuptools
-BuildRequires:  python-pip
-Requires:	python-ply
-Requires:	python-imaging
-Requires:	python-pkg-resources
-Requires:	python-pillow
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(ply)
+BuildRequires:	python%{pyver}dist(pillow)
+Requires:	python%{pyver}dist(pillow)
 
 %description
 A tool to compile nml files to grf and/or nfo files.
@@ -40,10 +36,10 @@ NML is a meta-language that aims to be a lot simpler to learn and use than nfo.
 %autosetup -p1
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
 #handle docs in files section
 rm -rf %{buildroot}%{_docdir}
